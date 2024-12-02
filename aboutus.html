@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Theory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        h4 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .textbox {
+            font-size: 1rem;
+            color: #333;
+            margin: 20px auto;
+            max-width: 300px;
+            line-height: 1.6;
+            hyphens: auto;
+            word-break: break-word;
+            word-spacing: 0.1em;
+        }
+        @media (min-width: 500px) {
+            .textbox {
+                text-align: justify;
+            }
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 300px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .slideshow-images {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            width: 100%;
+        }
+        .slideshow-images img {
+            width: 300px;
+            height: 300px;
+            flex-shrink: 0;
+        }
+        .spacer {
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h4>About</h4>
+
+<div class="slideshow-container">
+    <div class="slideshow-images" id="slideshow">
+        <img src="beingintheworld3.png" alt="Image 1">
+        <img src="beingintheworld2.png" alt="Image 2">
+        <img src="beingintheworld4.png" alt="Image 3">
+        <img src="beingintheworld5.png" alt="Image 4">
+        <img src="beingintheworld6.png" alt="Image 5">
+    </div>
+</div>
+
+<div class="textbox">
+    <p>"I can waste five years of your time in one year." is the first in a series of collaborations between artist <a href="https://www.instagram.com/killkenan/" target="_blank" rel="noopener noreferrer">Kenan Abbas</a> and anthropologist <a href="https://www.instagram.com/outofitt/" target="_blank" rel="noopener noreferrer">Yanik Lechev</a>, aimed at exploring new ways in which visual and conceptual elements in art can interact to produce alternative modes of seeing and experiencing the world.</p>
+</div>
+
+<div class="textbox">
+    <p>Taking heavy influence from the philosophical works of Deleuze & Guattari, the two look at creating new contexts for engaging with concepts from philosophy, psychoanalysis, the psychology of perception, and art theory, and to enable audiences to engage with those fields in a playful manner, outside of the institutional context of academia.</p>
+</div>
+
+<div class="textbox">
+    <p>The booklet accompanying the exhibition is an attempt to provide an accessible introduction to the field of phenomenology and to provide examples of the ways in which phenomenological thinking has been applied to art, with the aim to enable audiences to engage with Abbas' paintings in a phenomenological manner and to deepen their relationship with the works, while keeping their intentional ambiguity intact.</p>
+</div>
+
+<div class="textbox">
+    <p>The theoretical part of the exhibition makes use of the visual language of diagrams as an attempt to make the field of phenomenology accessible to those with more visual modes of processing information such as persons with Dyslexia, ADHD, and other neurodivergent ways of perceiving.</p>
+</div>
+
+<div class="textbox">
+    <p>The exhibition was originally hosted physically by <a href="https://www.instagram.com/pivot7club/" target="_blank" rel="noopener noreferrer">Pivot7Club</a> between 14.11-23.11.2024 and has now been adapted into being hosted in a digital format.</p>
+</div>
+
+<script>
+    const slideshow = document.getElementById('slideshow');
+    const images = document.querySelectorAll('#slideshow img');
+    let index = 0;
+
+    function slideImages() {
+        index++;
+        if (index >= images.length) {
+            index = 0; // Loop back to the first image
+        }
+        const offset = -index * 300; // Width of each image
+        slideshow.style.transform = `translateX(${offset}px)`;
+    }
+
+    setInterval(slideImages, 3000); // Change image every 3 seconds
+</script>
+
+</body>
+</html>
